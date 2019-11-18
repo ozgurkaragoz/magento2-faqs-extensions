@@ -185,7 +185,7 @@ class Faq extends \Magento\Framework\View\Element\Template
             $select->order('faq.faq_id DESC');
         }
 
-        $select->limit(8);
+        $select->limit(50);
 
         if ($results = $this->_faqResourceModel->getConnection()->fetchAll($select)) {
             return $results;
